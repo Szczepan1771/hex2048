@@ -1,0 +1,160 @@
+:root {
+  --a: 80px;
+  --fontSize: calc(var(--a) * 0.4);
+  --height: calc(1.732 * var(--a));
+  --margin: calc(var(--a) * 0.3);
+  --borderSize: calc(var(--a) * 0.03);
+}
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+html, body, #root {
+  width: 100%;
+  height: 100%;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.hex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--a);
+  height: var(--height);
+  margin: calc(var(--margin) * -0.5) var(--margin) var(--margin) var(--margin);
+  font-size: var(--fontSize);
+  background-color: #3b1626;
+  color: white;
+  transition: .3s;
+  border-top: var(--borderSize) solid black;
+  border-bottom: var(--borderSize) solid black;
+}
+
+.hex::before {
+  position: absolute;
+  content: "";
+  transform: rotate(60deg);
+  background: inherit;
+  width: inherit;
+  height: inherit;
+  border-radius: inherit;
+  z-index: -1;
+  border-top: var(--borderSize) solid black;
+  border-bottom: var(--borderSize) solid black;
+}
+
+.hex::after {
+  position: absolute;
+  content: "";
+  transform: rotate(-60deg);
+  background: inherit;
+  width: inherit;
+  height: inherit;
+  border-radius: inherit;
+  z-index: -1;
+  border-top: var(--borderSize) solid black;
+  border-bottom: var(--borderSize) solid black;
+}
+
+.hex_column {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.hex_grid {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 50px;
+  background-color: darkolivegreen;
+  margin-bottom: 26px;
+  color: white;
+}
+
+.input_wrapper {
+  display: flex;
+  align-items: flex-end;
+}
+
+.input_label {
+  margin-right: 10px;
+}
+
+.button {
+  padding: 5px 15px;
+}
+
+.x0 {
+  background-color: #6c6367;
+}
+
+.x2{
+  background-color: #fbf6f8;
+  color: #6c6367;
+}
+.x4{
+  background-color: #eed2de;
+  color: #6c6367;
+}
+.x8{
+  background-color: #e0afc4;
+  color: #6c6367;
+}
+
+.x16{
+  background-color: #d38baa;
+  color: whitesmoke;
+}
+.x32{
+  background-color: #c5678f;
+  color: whitesmoke;
+}
+.x64{
+  background-color: #b74575;
+  color: whitesmoke;
+}
+.x128{
+  background-color: #94375f;
+  color: whitesmoke;
+}
+.x256{
+  background-color: #702a48;
+  color: whitesmoke;
+}
+.x512{
+  background-color: #5e233c;
+  color: whitesmoke;
+}
+.x1024{
+  background-color: #521f35;
+  color: whitesmoke;
+}
+.x2048{
+  background-color: #3b1626;
+  color: whitesmoke;
+}
+
